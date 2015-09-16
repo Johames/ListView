@@ -1,38 +1,46 @@
 package com.example.johames.listview;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class Main2Activity extends AppCompatActivity {
+public class ListviewIMG extends Activity {
 
-    private ListView lista;
-    private ArrayAdapter ListaCursos;
-    String[] listas = {"Lenguaje de Programacion III", "Calculo III", "Ingenieria Administrativa", "Contabilidad II",
-            "Ciencia y Biblia", ""};
+    ListViewAdapter ListaCursoAdapter;
+    ListView lv_ListaCursos;
+    String[] titulo = new String[]{
+            "titulo1",
+            "titulo2",
+            "titulo3",
+            "titulo4",
+    };
+
+    int[] imagenes = {
+            R.drawable.icon01,
+            R.drawable.icon02,
+            R.drawable.images,
+            R.drawable.troll
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_listview_img);
 
-        lista=(ListView)findViewById(R.id.listView);
-        ListaCursos = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listas);
-        lista.setAdapter(ListaCursos);
-
+        lv_ListaCursos = (ListView) findViewById(R.id.johann);
+        ListaCursoAdapter = new ListViewAdapter(this,titulo,imagenes);
+        lv_ListaCursos.setAdapter(ListaCursoAdapter);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main2, menu);
+        getMenuInflater().inflate(R.menu.menu_listview_img, menu);
         return true;
     }
 

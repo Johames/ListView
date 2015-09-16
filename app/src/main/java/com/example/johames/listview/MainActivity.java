@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements ListView.OnItemCl
                 startActivity(ListviewIMG);
                 break;
             case 1:
-                Intent Listview = new Intent(MainActivity.this, Main2Activity.class);
+                Intent Listview = new Intent(MainActivity.this, ListviewIMG.class);
                 startActivity(Listview);
                 break;
             case 2:

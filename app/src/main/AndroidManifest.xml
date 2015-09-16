@@ -17,10 +17,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Main2Activity"
-            android:label="@string/title_activity_main2" >
-        </activity>
-        <activity
             android:name=".Spinner"
             android:label="@string/title_activity_spinner" >
         </activity>
@@ -31,6 +27,10 @@
         <activity
             android:name=".Main22Activity"
             android:label="@string/title_activity_main22" >
+        </activity>
+        <activity
+            android:name=".ListviewIMG"
+            android:label="@string/title_activity_listview_img" >
         </activity>
     </application>
 
